@@ -56,6 +56,14 @@ namespace InterfaceTask
             wholeRightPart = wholeRightPart.Add(curr); // a^2 - 2ab + b^2
 
             Console.WriteLine("a^2 - 2ab + b^2 = " + wholeRightPart);
+
+            // Додавання розрахунку (a^2 - b^2) / (a + b)
+            T a2 = a.Multiply(a); // a^2
+            T b2 = b.Multiply(b); // b^2
+            T a2Minusb2 = a2.Subtract(b2); // a^2 - b^2
+            T aPlusB = a.Add(b); // a + b
+            Console.WriteLine("(a^2-b^2) / (a+b) = " + a2Minusb2.Divide(aPlusB)); // Розрахунок
+
             Console.WriteLine("=== Finishing testing (a-b)^2 = a^2 - 2ab + b^2 with a = " + a + ", b = " + b + " ===");
         }
 
